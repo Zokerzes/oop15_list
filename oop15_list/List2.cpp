@@ -280,3 +280,66 @@ void List2::Print(int pos)
 	cout << pos << " element: ";
 	cout << temp->data << endl;
 }
+
+List2& List2::operator=(const List2& L)
+{
+	//Проверка присваивания элемента "самому себе" 
+	if (this == &L)
+		return *this;
+	//удаление старого списка
+	this->~List2(); // DelAll();
+	Elem* temp = L.Head;
+	//Копируем элементы
+	while (temp != 0)
+	{
+		AddTail(temp->data);
+		temp = temp->next;
+	}
+	return *this;
+}
+
+List2 List2::operator+(const List2& L)
+{
+	//Заносим во временный список элементы первого
+ //списка
+	List2 Result(*this);
+	//List Result = *this;
+	Elem* temp = L.Head;
+	//Добавляем во временный список элементы 
+	//второго списка
+	while (temp != 0)
+	{
+		Result.AddTail(temp->data);
+		temp = temp->next;
+	}
+
+	
+	return Result;
+}
+
+bool List2::operator==(const List2& L)
+{
+	//Сравнение по количеству
+	if (Count != L.Count)
+		return false;
+	Elem* t1, * t2;
+	t1 = Head;
+	t2 = L.Head;
+	//Сравнение по содержанию
+	while (t1 != 0)
+	{
+		//Сверяем данные, которые
+		//находятся на одинаковых позициях
+		if (t1->data != t2->data)
+			return false;
+		t1 = t1->next;
+		t2 = t2->next;
+	}
+	return true;
+}
+
+bool List2::operator!=(const List2& L)
+{
+	//Используем предыдущую функцию сравнения
+	return !(*this == L);
+}
