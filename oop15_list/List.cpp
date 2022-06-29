@@ -75,6 +75,7 @@ int List<T>::GetCount()
 	return Count;
 }
 
+
 template<class T>
 int List<T>::findOfNumber(T num)
 {
