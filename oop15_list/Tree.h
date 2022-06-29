@@ -6,6 +6,7 @@
 
 struct node
 {
+	string numberCar;
 	List<Forfeit> sh;
 	node* left, * right, * parent;
 };
@@ -30,7 +31,20 @@ public:
 	
 	};
 	//поиск от указанного узла
-	node* Search(node* Node, char* key);
+	node* Search(node* Node, string key) 
+	{
+		//дописать !!!
+		//Пока есть узлы и ключи не совпадают
+		while (Node != 0 && key.compare(Node->numberCar)) != 0)
+		{
+			if (strcmp(k, Node->Name) < 0)
+				Node = Node->left;
+			else
+				Node = Node->right;
+		}
+		return Node
+	
+	};
 	//min от указанного узла
 	node* Min(node* Node);
 	//max от указанного узла
