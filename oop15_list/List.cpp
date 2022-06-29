@@ -1,19 +1,21 @@
 #include "List.h"
-
-List::List()
+template<class T>
+List<T>::List()
 {
 	//Изначально список пуст
 	Head = Tail = NULL;
 	Count = 0;
 }
 
-List::~List()
+template<class T>
+List<T>::~List()
 {
 	//Вызов функции удаления
 	DelAll();
 }
 
-void List::Add(int data)
+template<class T>
+void List<T>::Add(T data)
 {
 	//создание нового элемента
 	Element* temp = new Element;
@@ -33,8 +35,8 @@ void List::Add(int data)
 		Head = Tail = temp;
 	}
 }
-
-void List::Del()
+template<class T>
+void List<T>::Del()
 {
 	//запоминаем адрес головного элемента
 	Element* temp = Head;
@@ -43,16 +45,16 @@ void List::Del()
 	//удаляем бывший головной элемент
 	delete temp;
 }
-
-void List::DelAll()
+template<class T>
+void List<T>::DelAll()
 {
 	//Пока еще есть элементы 
 	while (Head != 0)
 		//Удаляем элементы по одному
 		Del();
 }
-
-void List::Print()
+template<class T>
+void List<T>::Print()
 {
 	//запоминаем адрес головного элемента
 	Element* temp = Head;
@@ -66,14 +68,15 @@ void List::Print()
 	}
 	cout << "\n\n";
 }
-
-int List::GetCount()
+template<class T>
+int List<T>::GetCount()
 {
 	//Возвращаем количество элементов
 	return Count;
 }
 
-int List::findOfNumber(int num)
+template<class T>
+int List<T>::findOfNumber(T num)
 {
 	//запоминаем адрес головного элемента
 	Element* temp = Head;

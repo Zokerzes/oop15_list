@@ -2,6 +2,10 @@
 #include<iostream>
 #include"List.h"
 using namespace std;
+// List шаблон
+// Shtraf
+// Node вершина дерева(класс или структура)
+// Tree
 
 int main()
 {

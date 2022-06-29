@@ -1,29 +1,31 @@
 #pragma once
 #include<iostream>
 using namespace std;
+template<class T>
 struct Element
 {
 	//Данные
-	int data;
+	T data;
 	//Адрес следующего элемента списка
 	Element* Next;
 };
+template<class T>
 class List
 {
 	//Адрес головного элемента списка
-	Element* Head;
+	Element<T>* Head;
 	//Адрес концевого элемента списка
-	Element* Tail;
+	Element<T>* Tail;
 	//Количество элементов списка
 	int Count;
 public:
 	//Конструктор
-	List();
+	List<T>();
 	//Деструктор
-	~List();
+	~List<T>();
 	//Добавление элемента в список
 	//(Новый элемент становится последним)
-	void Add(int data);
+	void Add(T data);
 	//Удаление элемента списка
 	//(Удаляется головной элемент)
 	void Del();
@@ -35,7 +37,7 @@ public:
 	//Получение количества элементов,
 	//находящихся в списке
 	int GetCount();
-	int findOfNumber(int);
+	int findOfNumber(T);
 };
 
 
