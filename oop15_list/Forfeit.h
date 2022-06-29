@@ -27,5 +27,6 @@ public:
 		this->date=date;
 	};
 
+	~Forfeit() {};
 };
 
