@@ -2,26 +2,27 @@
 #include<iostream>
 #include "List.h"
 #include<string>
+#include"node.h"
 using namespace std;
 
 class Forfeit
 {
 public:
 
-	int number;
+	string numberCar;
 	int numOffense;
 	float summ;
 	string date;
 
 	Forfeit() {
-		number = 0 ;
+		numberCar = "Null";
 		numOffense = 0;
 		summ = 0;
 		date = " ";
 	};
 
-	Forfeit(int number, int numOffense, float summ, string date) {
-		this->number=number;
+	Forfeit(string numberCar , int numOffense, float summ, string date) {
+		this->numberCar = numberCar;
 		this->numOffense=numOffense;
 		this->summ=summ;
 		this->date=date;

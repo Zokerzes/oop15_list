@@ -1,6 +1,10 @@
 ﻿#include <iostream>
 #include<iostream>
 #include"List.h"
+#include"Forfeit.h"
+#include"Tree.h"
+#include"node.h"
+#include<string>
 using namespace std;
 // List шаблон
 // Shtraf
@@ -9,16 +13,14 @@ using namespace std;
 
 int main()
 {
-	//Создаем объект класса List
-	List<int> lst;
-	
-	for (int i = 0; i < 10; i++)	lst.Add(i*2);
-
-	lst.Print();
-	
-	cout <<"elemrnt 8 - " << lst.findOfNumber(8);
-	cout << "elemrnt 3 - " << lst.findOfNumber(3);
-
+	Tree tree;
+	Forfeit f("TB444O61", 28, 500, "28.06.2022");
+	//node n;
+	//n.setNumberCar(f.numberCar);
+	//n.addForfeit(f);
+	//tree.Insert(&n);
+	//tree.Print(&n);
+	cout << f.numberCar << " " << f.numOffense << " " << f.summ;
 
 }
 
