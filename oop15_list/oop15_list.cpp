@@ -15,7 +15,7 @@ int main()
 {
 	Tree tree;
 	Forfeit f("TB444O61", 28, 500, "28.06.2022");
-	//node n;
+	node n;
 	//n.setNumberCar(f.numberCar);
 	//n.addForfeit(f);
 	//tree.Insert(&n);
