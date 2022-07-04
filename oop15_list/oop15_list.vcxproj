@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Forfeit.cpp" />
+    <ClCompile Include="io.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="List2.cpp" />
     <ClCompile Include="_node.cpp" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forfeit.h" />
+    <ClInclude Include="io.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="List2.h" />
     <ClInclude Include="node.h" />
