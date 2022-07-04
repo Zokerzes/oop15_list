@@ -14,29 +14,29 @@ public:
 	node* parent = nullptr;
 	node() 
 	{
-		//numberCar = "NULL";
+		numberCar = "NULL";
 	}
-	/*node(string numberCar, List<Forfeit> sh) 
+	node(string numberCar, List<Forfeit> sh) 
 	{
 		this->numberCar = numberCar;
 		this->sh = sh;
 		node* left = nullptr, * right = nullptr, * parent = nullptr;
 	}
-	~node(){};*/
-	//string getNumberCar() { return numberCar; };
-	/*List<Forfeit> getForfeit() 
+	~node(){};
+	string getNumberCar() { return numberCar; };
+	List<Forfeit> getForfeit() 
 	{
 		sh.Print();
 		return sh;
-	}*/
-	/*void setNumberCar(string numberCar) 
+	}
+	void setNumberCar(string numberCar) 
 	{
 		this->numberCar = numberCar;
-	}*/
-	/*void addForfeit(Forfeit sht)
+	}
+	void addForfeit(Forfeit sht)
 	{
 		sh.Add(sht);
-	};*/
+	};
 
 };
 

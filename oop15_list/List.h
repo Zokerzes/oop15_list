@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include"node.h"
+#include"Forfeit.h"
 using namespace std;
 template<class N>
 struct Element
@@ -39,7 +40,7 @@ public:
 	void Add(T data)
 	{
 		//создание нового элемента
-		Element* temp = new Element;
+		Element<T>* temp = new Element<T>;
 		//заполнение данными
 		temp->data = data;
 		//следующий элемент отсутствует
@@ -61,7 +62,7 @@ public:
 	void Del()
 	{
 		//запоминаем адрес головного элемента
-		Element* temp = Head;
+		Element<T>* temp = Head;
 		//перебрасываем голову на следующий элемент
 		Head = Head->Next;
 		//удаляем бывший головной элемент
@@ -86,14 +87,14 @@ public:
 		while (temp != 0)
 		{
 			//Выводим данные
-			cout << temp->data << " ";
+			cout << temp->data;
 			//Переходим на следующий элемент
 			temp = temp->Next;
 		}
 		cout << "\n\n";
 	};
 
-
+	
 
 	template <typename T>
 	void Print()

@@ -27,7 +27,16 @@ public:
 		this->summ=summ;
 		this->date=date;
 	};
-
+	
+	friend std::ostream& operator<< (std::ostream& os, const Forfeit& p)
+	{
+		return os << "date - " << p.date << " number car - " << p.numberCar << " point of Forfeite  - " << p.numOffense << " summ - " << p.summ << endl << endl;
+	}
 	~Forfeit() {};
 };
+
+//std::ostream& operator<< (std::ostream& os, const Forfeit& p)
+//{
+//	return os << "date - "<<p.date<<" number car - "<<p.numberCar<<" point of Forfeite  - "<<p.numOffense<<"summ - "<<p.summ;
+//}
 
