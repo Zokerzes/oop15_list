@@ -58,9 +58,9 @@ public:
 	
 	};
 	//поиск от указанного узла
-	node* Search(node* Node, string key) 
+	node* Search(string key) 
 	{
-		
+		node* Node = root;
 		
 		//Пока есть узлы и ключи не совпадают
 		while (Node != 0 && (key.compare(Node->numberCar)) != 0)
@@ -157,7 +157,7 @@ public:
 		if (y == 0) //элемент первый (единственный)
 			root = z;
 		//чей ключ больше?
-		else if (z->numberCar.compare(Node->numberCar) < 0)
+		else if (z->numberCar.compare(y->numberCar) < 0)
 			y->left = z;
 		else
 			y->right = z;

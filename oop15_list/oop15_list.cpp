@@ -21,23 +21,34 @@ int main()
 	n.addForfeit(f);
 	n.setNumberCar(f1.numberCar);
 	n.addForfeit(f1);
+
 	node n1;
 	Forfeit j("TB555O61", 9, 2500, "25.06.2022");
 	n1.setNumberCar(j.numberCar);
 	n1.addForfeit(j);
+	Forfeit j1("TB555O61", 12, 500, "24.06.2022");
+	n1.setNumberCar(j1.numberCar);
+	n1.addForfeit(j1);
+
+	node n2;
+	Forfeit g("CT111H77", 21, 5000, "21.05.2022");
+	n2.setNumberCar(g.numberCar);
+	n2.addForfeit(g);
 
 
 
 
 	tree.Insert(&n);
-	//tree.Insert(&n1);
-
-	//tree.Print(tree.Search(&n, "TB555O61"));
-	//n.addForfeit(f1);
+	tree.Insert(&n1);
+	tree.Insert(&n2);
+	cout << "__________print__all______________" << endl;
+	tree.Print(&n);
+	cout << "__________seаrch__CT111H77________" << endl;
+	tree.Print(tree.Search("CT111H77"));
 	
 
-	tree.Print(&n);
-	//cout << f.numberCar << " " << f.numOffense << " " << f.summ;
+	
+	
 
 }
 
