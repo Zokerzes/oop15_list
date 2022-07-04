@@ -46,6 +46,11 @@ public:
 	node* root;
 	Tree() { root = NULL; };
 	~Tree() { Del(); };
+	Tree* getTree()
+	{
+		return this;
+	};
+
 	//печать от указанного узла
 	void Print(node* Node) 
 	{
@@ -57,6 +62,12 @@ public:
 		}
 	
 	};
+	/*void printDia(string start, string end)
+	{
+
+		Print(Next(node * Node));
+	};*/
+
 	//поиск от указанного узла
 	node* Search(string key) 
 	{

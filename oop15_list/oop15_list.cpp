@@ -4,6 +4,7 @@
 #include"Forfeit.h"
 #include"Tree.h"
 #include"node.h"
+#include"io.h"
 #include<string>
 using namespace std;
 // List шаблон
@@ -45,9 +46,12 @@ int main()
 	tree.Print(&n);
 	cout << "__________seаrch__CT111H77________" << endl;
 	tree.Print(tree.Search("CT111H77"));
-	
+	cout << "------------------------------------" << endl;
+	tree.Print(tree.GetRoot());
 
-	
+	/*io tr;
+	tr.addForfeit();
+	tr.printTree();*/
 	
 
 }
